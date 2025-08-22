@@ -1,0 +1,422 @@
+:root {
+    --bg: rgb(21 17 12);
+    --card: #111318;
+    --text: rgb(21 17 12);
+    --muted: rgb(21 17 12);
+    --brand: rgb(21 17 12);
+    /* acento suave moderno */
+    --brand-strong: #17b3a0;
+    --header-h: 64px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+  font-family: "Work Sans", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* Containers */
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+/* Header / Navbar */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: var(--header-h);
+    display: grid;
+    align-items: center;
+    z-index: 1000;
+    background: color-mix(in oklab, var(--bg), #fff 6%);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid color-mix(in oklab, var(--card), #fff 6%);
+}
+
+.nav-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-toggle {
+    justify-self: end;
+    background: transparent;
+    border: 0;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+}
+
+.nav-toggle .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    margin: 5px auto;
+    transition: transform .25s ease, opacity .2s ease;
+}
+
+/* Nav links */
+.nav-menu {
+    grid-column: 2 / -1;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text);
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: 10px;
+    transition: background .2s ease, color .2s ease;
+}
+
+.nav-menu a:hover {
+    background: color-mix(in oklab, var(--card), #fff 8%);
+}
+
+.nav-menu .btn-sm {
+    background: var(--brand);
+    color: #0d1117;
+    font-weight: 600;
+}
+
+.nav-menu .btn-sm:hover {
+    background: var(--brand-strong);
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: auto;
+    /* se ajusta a la proporción de la imagen */
+    overflow: hidden;
+    /* evita scroll accidental */
+}
+
+.hero img {
+    margin-top: 68px;
+    width: 100%;
+    height: auto;
+    /* mantiene proporción */
+    display: block;
+    /* quita espacios indeseados */
+    object-fit: cover;
+    /* se asegura que rellene si le damos height fijo */
+}
+
+que se ajuste sin cortar */ .hero-overlay {
+    display: none;
+}
+
+/* reservado si querés usar más capas */
+
+.hero-inner {
+    position: relative;
+    padding: 6rem 0 4rem;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 3vw + 1.2rem, 3.2rem);
+    line-height: 1.1;
+    margin: 0 0 .6rem 0;
+}
+
+.hero p {
+    margin: 0 0 1.4rem 0;
+    color: var(--muted);
+    font-size: clamp(1rem, .6vw + .9rem, 1.2rem);
+}
+
+.promo {
+    width: 100%;
+    min-height: 70vh;
+    /* ajusta la altura */
+    display: flex;
+    align-items: center;
+    background-image: url("img/quieroIMGMesa\ de\ trabajo\ 5.webp");
+    /* 👈 tu imagen de fondo */
+    background-size: cover;
+    /* cubre */
+    background-position: left center;
+    /* que se vea bien el trofeo a la izquierda */
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+.promo-content {
+    margin-left: auto;
+    /* empuja el bloque a la derecha */
+    max-width: 500px;
+    text-align: left;
+    /* alineado del texto */
+}
+
+.promo-content h2 {
+      font-family: "Arima", system-ui;
+
+    color: rgb(21 17 12);
+    font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+    margin-bottom: .6rem;
+}
+
+.promo-content p {
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+/* Botón ya definido en hero */
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .8rem 1.1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--brand);
+    color: #e7e7e7;
+    border: 1px solid color-mix(in oklab, var(--brand), #000 8%);
+    transition: transform .12s ease, background .2s ease;
+}
+
+.btn:hover {
+    background: var(--brand-strong);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid color-mix(in oklab, var(--text), #000 70%);
+}
+
+.btn-ghost:hover {
+    background: color-mix(in oklab, var(--card), #fff 8%);
+}
+
+.nosotros-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.nosotros-text {
+    background-image: url("img/quieroIMGMesa\ de\ trabajo\ 14.webp");
+    /* 👈 alfajor de fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    padding: 4rem 0;
+    color: var(--text);
+}
+
+.nosotros-text h2 {
+    font-size: clamp(2rem, 2.5vw + 1rem, 2.8rem);
+    margin-bottom: 1rem;
+}
+
+.nosotros-text h2 span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.nosotros-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: white;
+}
+.historia{
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff, #f9f5f2);
+}
+
+.historia h2{
+  font-size: clamp(1.8rem, 2.5vw + 1rem, 2.6rem);
+  margin-bottom: .5rem;
+}
+
+.historia .subtitle{
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card{
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body{
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body h3{
+  font-size: 1rem;
+  margin-bottom: .6rem;
+  line-height: 1.4;
+}
+
+.card-body .source{
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-content p {
+    margin-left: 32px;}
+    .nosotros-text {
+        background-position: center;
+        padding: 2rem 0;
+    }
+}
+
+/* Sections base (placeholders) */
+.section {
+    padding: 80px 0;
+}
+
+.section.alt {
+    background: color-mix(in oklab, var(--card), #fff 6%);
+}
+
+.section h2 {
+    margin: 0 0 .5rem 0;
+    font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+}
+
+.section p {
+    color: var(--muted);
+}
+
+/* Responsive nav */
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        inset: var(--header-h) 0 auto 0;
+        background: color-mix(in oklab, var(--bg), #fff 4%);
+        border-bottom: 1px solid color-mix(in oklab, var(--card), #fff 6%);
+        display: grid;
+        padding: .8rem;
+        transform: translateY(-150%);
+        transition: transform .25s ease;
+    }
+
+    body.nav-open .nav-menu {
+        transform: translateY(0);
+    }
+
+    .nav-wrap {
+        grid-template-columns: 1fr auto;
+    }
+}
+
+/* Accesibilidad y motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .promo-content .btn{
+            margin-left: 60px;
+}
+.promo-content h2{
+    margin-right: -44px;
+text-align: center;}
+    .promo-content p {
+        color: var(--muted);
+        margin-bottom: 21.2rem;
+    }
+.promo-content{
+        display: flex
+;margin: 0;
+    flex-direction: column;
+    align-items: center;
+
+}
+    }
+
+    .hero {
+        background-size: contain;
+        background-color: #000;
+        /* o el color que combine */
+    }
