@@ -94,7 +94,7 @@ body {
 }
 
 .nav-menu a {
-    color: var(--text);
+    color: white;
     text-decoration: none;
     padding: .5rem .75rem;
     border-radius: 10px;
