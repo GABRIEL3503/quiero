@@ -339,7 +339,8 @@ que se ajuste sin cortar */ .hero-overlay {
 /* Responsive */
 @media (max-width: 768px) {
     .promo-content p {
-    margin-left: 32px;}
+        text-align: center;
+    margin-left: 18px;}
     .nosotros-text {
         background-position: center;
         padding: 2rem 0;
@@ -402,10 +403,11 @@ que se ajuste sin cortar */ .hero-overlay {
 
 @media (max-width: 600px) {
     .promo-content .btn{
-            margin-left: 60px;
+            margin-left: 20px;
 }
 .promo-content h2{
-    margin-right: -44px;
+    font-size: 24px;
+    margin-right: -10px;
 text-align: center;}
     .promo-content p {
         color: var(--muted);
