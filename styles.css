@@ -9,9 +9,15 @@
     --header-h: 64px;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: hidden!important;
 }
 
+[data-aos="fade-right"] {
+  transform: translateX(40px); /* en lugar de 100px */
+}
+.section, .contact, .nosotros, .historia {
+  overflow-x: hidden;
+}
 
 * {
     box-sizing: border-box;
