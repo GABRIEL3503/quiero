@@ -11,9 +11,7 @@
 body {
   overflow-x: hidden!important;
 }
-html, body {
-  overflow-x: hidden;
-}
+
 
 [data-aos="fade-right"] {
   transform: translateX(40px); /* en lugar de 100px */
