@@ -180,6 +180,7 @@ que se ajuste sin cortar */ .hero-overlay {
 }
 
 .promo-content {
+    margin-right: 40px;
     margin-left: auto;
     /* empuja el bloque a la derecha */
     max-width: 500px;
