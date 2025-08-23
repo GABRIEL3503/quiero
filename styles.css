@@ -8,6 +8,10 @@
     --brand-strong: #17b3a0;
     --header-h: 64px;
 }
+body {
+  overflow-x: hidden;
+}
+
 
 * {
     box-sizing: border-box;
