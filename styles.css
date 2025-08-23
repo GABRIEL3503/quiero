@@ -54,6 +54,8 @@ body {
 }
 
 .logo {
+          font-family: "Arima", system-ui;
+
     font-weight: 800;
     letter-spacing: 0.3px;
     text-decoration: none;
@@ -80,7 +82,8 @@ body {
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--text);
+    background: 
+    white;
     margin: 5px auto;
     transition: transform .25s ease, opacity .2s ease;
 }
@@ -106,7 +109,7 @@ body {
 }
 
 .nav-menu .btn-sm {
-    background: var(--brand);
+    background: rgb(230, 230, 230);
     color: #0d1117;
     font-weight: 600;
 }
@@ -274,6 +277,8 @@ que se ajuste sin cortar */ .hero-overlay {
 }
 
 .historia h2{
+          font-family: "Arima", system-ui;
+
   font-size: clamp(1.8rem, 2.5vw + 1rem, 2.6rem);
   margin-bottom: .5rem;
 }
