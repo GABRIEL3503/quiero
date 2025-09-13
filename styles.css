@@ -202,13 +202,13 @@ que se ajuste sin cortar */ .hero-overlay {
 .promo-content h2 {
       font-family: "Arima", system-ui;
 
-    color: rgb(21 17 12);
+    color: rgb(241, 241, 241);
     font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
     margin-bottom: .6rem;
 }
 
 .promo-content p {
-    color: var(--muted);
+    color: white;
     margin-bottom: 1.2rem;
 }
 
@@ -582,7 +582,6 @@ que se ajuste sin cortar */ .hero-overlay {
     margin-right: -10px;
 text-align: center;}
     .promo-content p {
-        color: var(--muted);
         margin-bottom: 21.2rem;
     }
 .promo-content{
